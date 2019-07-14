@@ -48,13 +48,14 @@ public class Body extends Clicker implements KeyListener {
 		
 		frame.addKeyListener(this);		
 		frame.add(start);
-		frame.add(stop);
+		frame.add(stop);		
 		
 		frame.setFocusable(true);
 		frame.setSize(250, 250);
 		frame.setResizable(false);
 		frame.setLayout(null);
 		frame.setVisible(true);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}	
 	

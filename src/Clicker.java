@@ -7,13 +7,13 @@ public class Clicker extends SwingWorker<Integer, Void> {
 	
 	public void done() {
 		
-		System.out.println("done");
+		System.out.println("Stop clicking");
 	}
 
 	@Override
 	protected Integer doInBackground() throws Exception {
 
-		System.out.println("work work");		
+		System.out.println("Start clicking");		
 		
 		try {
 			
@@ -21,10 +21,9 @@ public class Clicker extends SwingWorker<Integer, Void> {
 			
 			try {
 				
-				while(true) {
-					
-					Thread.sleep(200);
+				while(true) {		
 
+					System.out.println("Click");
 //					System.out.println("Clicking");
 					robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);	
 					
@@ -32,6 +31,8 @@ public class Clicker extends SwingWorker<Integer, Void> {
 					
 					robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 //					System.out.println("released");
+					
+					Thread.sleep(200);
 				}
 				
 			} catch (InterruptedException e) {
