@@ -62,6 +62,7 @@ public class Body extends Clicker implements KeyListener {
 	public void startClick() {
 		
 		clicker.execute(); 
+		setStarted(true);
 		
 		System.out.println("Started");		
 		start.setEnabled(false);
@@ -73,6 +74,7 @@ public class Body extends Clicker implements KeyListener {
 	public void stopClick() {
 		
 		clicker.cancel(true);
+		setStarted(false);
 		
 		System.out.println("Stopped");
 		start.setEnabled(true);
@@ -89,14 +91,11 @@ public class Body extends Clicker implements KeyListener {
 			
 			if(!isStarted()) {
 				
-				start.doClick();
+				start.doClick();				
 				
-				setStarted(true);
 			} else {
 				
-				stop.doClick();
-				
-				setStarted(false);
+				stop.doClick();		
 			}
 		}
 	}
